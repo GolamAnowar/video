@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <head>
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!-- or -->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+</head>
+<body>
+
+    <div class="container hide">
+        <div class="wrapper">
+            <div class="video-timeline">
+                <div class="progress-area">
+                    <span>00:00</span>
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <ul class="video-controls">
+                <li class="option left">
+                    <div class="volume"><i class='bx bx-volume-full'></i></div>
+                    <input type="range" class="volume-slider" min="0" max="1" step="any">
+                    <div class="video-timer">
+                        <p class="current-time">00:00</p>
+                        <p class="separator">/</p>
+                        <p class="video-duration">00:00</p>
+                    </div>
+                </li>
+                <li class="option center">
+                    <div class="skip-backward"><i class='bx bxs-chevrons-left'></i></div>
+                    <div class="play-pause"><i class='bx bxs-right-arrow'></i></div>
+                    <div class="skip-forward"><i class='bx bxs-chevrons-right'></i></div>
+                </li>
+                <li class="option right">
+                    <div class="playBack-content">
+                        <div class="speed">
+                            <span class="material-symbols-outlined">
+                                slow_motion_video
+                            </span>
+                        </div>
+                         <ul class="speed-options">
+                             <li data-speed="2">2x</li>
+                             <li data-speed="1.5">1.5x</li>
+                             <li data-speed="1" class="active">normal</li>
+                             <li data-speed="0.75">0.75x</li>
+                             <li data-speed="0.5">0.5x</li>
+                         </ul>
+                    </div>
+                    <div class="pic-in-pic">
+                        <span class="material-symbols-outlined">
+                            picture_in_picture_alt
+                        </span>
+                    </div>
+                    <div class="fullscreen">
+                        <i class='bx bx-fullscreen' ></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <video src="Dil- Shreya's Version (Lyrical) - Ek Villain Returns - John Disha Arjun Tara - Kaushik-Guddu, Mohit.mp4"></video>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

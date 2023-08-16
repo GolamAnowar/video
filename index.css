@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    outline: none;
+    /* transition: all .5s linear; */
+    list-style: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background : linear-gradient(to bottom, #00ff39, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+}
+.container.active{
+    max-width: 100%;
+    width: 100%;
+}
+.container .wrapper{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+.container.hide .wrapper{
+    opacity: 1;
+    pointer-events: auto;
+}
+/* .container .wrapper::before{
+    content: "";
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    height: calc(100% + 35px);
+    z-index: -1;
+} */
+.container video{
+    width: 100%;
+}
+.container .video-controls{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+.container .video-controls li{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+.container .left input{
+    width: 100px;
+}
+.container .video-controls .video-timer{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.container .video-controls i, span{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.container .wrapper .progress-bar{
+    width: 0%;
+    height: 100%;
+    background: blue;
+    position: relative;
+}
+.container .wrapper .progress-area{
+    cursor: pointer;
+    background: #ffffff;
+    height: 3px;
+}
+.container .wrapper .progress-area span{
+    position: absolute;
+    left: 50%;
+    color: #ffff;
+    font-size: 1.5rem;
+    top: -25px;
+}
+.container .wrapper .progress-bar::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: inherit;
+    right: 0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.container .wrapper .progress-area span, .progress-bar::before{
+    display: none;
+}
+.container .wrapper .progress-area:hover span{
+    display: block;
+}
+.container .wrapper .progress-area:hover .progress-bar::before{
+    display: block;
+}
+.container .right .playback-content{
+    position: relative;
+}
+.container .right .playBack-content .speed-options{
+    position: absolute;
+    bottom: 55px;
+    background: #ffff;
+    color: #000;
+    padding: 0 2rem;
+    border-radius: .5rem;
+    opacity: 0;
+}
+.container .speed-options li{
+    margin:1rem 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.container .speed-options li.active{
+    color: blue;
+}
+.container .right .playBack-content .speed-options.active{
+    opacity: 1;
+}
